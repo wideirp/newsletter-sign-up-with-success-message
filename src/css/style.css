@@ -218,9 +218,6 @@ body {
 .sign-up #form div label {
   font: 700 0.8rem/1 "Roboto", sans-serif;
 }
-.sign-up #form div #email {
-  border-radius: 8px;
-}
 .sign-up #form div #email-error {
   position: absolute;
   font: 700 0.8rem/1 "Roboto", sans-serif;
@@ -231,6 +228,9 @@ body {
 
 #email {
   padding: 1rem 1.5rem;
+  border-radius: 8px;
+  outline: none;
+  outline-color: green;
 }
 
 #user-email {
@@ -260,4 +260,12 @@ body {
 
 #email[data-error=hidden] {
   border: 1px solid hsl(235, 18%, 26%);
+}
+
+#email-error[data-error=visible] {
+  display: inline-block;
+}
+
+#email-error[data-error=hidden] {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
