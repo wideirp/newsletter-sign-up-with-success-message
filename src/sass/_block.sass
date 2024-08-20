@@ -16,8 +16,17 @@
       display: flex
       flex-direction: column
       gap: 0.5rem
+      position: relative
       label
         font: $font-small
+      #email
+        border-radius: 8px
+      #email-error
+        position: absolute
+        font: $font-small
+        top: 0
+        right: 0
+        color: $clr-primary
 
 #email
   padding: 1rem 1.5rem

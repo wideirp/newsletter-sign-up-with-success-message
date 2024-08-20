@@ -1,6 +1,15 @@
+@use 'variables' as *
+@use 'sass:color'
+  
 .success,
 .sign-up
   &[data-state='hidden']
     display: none
   &[data-state='visible']
     display: flex
+
+#email[data-error='visible']
+  border: 1px solid $clr-primary
+  background-color: color.adjust($color: $clr-primary, $alpha: -0.9) 
+#email[data-error='hidden']
+  border: 1px solid $clr-neutral-600

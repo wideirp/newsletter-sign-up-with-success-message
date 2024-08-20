@@ -213,9 +213,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 .sign-up #form div label {
   font: 700 0.8rem/1 "Roboto", sans-serif;
+}
+.sign-up #form div #email {
+  border-radius: 8px;
+}
+.sign-up #form div #email-error {
+  position: absolute;
+  font: 700 0.8rem/1 "Roboto", sans-serif;
+  top: 0;
+  right: 0;
+  color: hsl(4, 100%, 67%);
 }
 
 #email {
@@ -240,4 +251,13 @@ body {
 .success[data-state=visible],
 .sign-up[data-state=visible] {
   display: flex;
+}
+
+#email[data-error=visible] {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: rgba(255, 98, 87, 0.1);
+}
+
+#email[data-error=hidden] {
+  border: 1px solid hsl(235, 18%, 26%);
 }/*# sourceMappingURL=style.css.map */
