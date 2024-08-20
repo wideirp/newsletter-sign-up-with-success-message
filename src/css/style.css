@@ -105,13 +105,38 @@ textarea:not([rows]) {
 body {
   background: hsl(235, 18%, 26%);
   font-family: "Roboto", sans-serif;
+  color: hsl(234, 29%, 20%);
   margin: 0;
+}
+body h1 {
+  font: 700 clamp(2.5rem, 1rem + 1vw, 3.5rem)/1 "Roboto", sans-serif;
+  margin-top: 3rem;
+}
+body p {
+  font: 400 1rem/1.3 "Roboto", sans-serif;
+}
+body button {
+  font: 700 1rem/1 "Roboto", sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.success .btn {
+  margin-top: auto;
+}
+@media (min-width: 30rem) {
+  .success .btn {
+    margin: 3rem 0 1.5rem 0;
+  }
 }
 
 .card {
@@ -126,4 +151,24 @@ body {
     padding: 1.5rem;
     border-radius: 36px;
   }
+}
+
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  background: hsl(235, 18%, 26%);
+  padding: 1rem;
+}
+.btn:hover, .btn:focus, .btn:active {
+  background: hsl(4, 100%, 67%);
+  box-shadow: 0 4px 10px hsl(4, 100%, 67%);
+}
+
+.success.card {
+  max-width: 31.5rem;
+}
+.success.card .text-wrapper figure {
+  margin: 4rem 0 0 0;
 }/*# sourceMappingURL=style.css.map */
