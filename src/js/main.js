@@ -10,7 +10,7 @@ const [VISIBLE, HIDDEN] = ["visible", "hidden"];
 
 const validateEmail = (email) => {
   const emailPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
-  const isValid = emailPattern.test(email);
+  const isValid = emailPattern.test(email) && email !== "";
   return isValid;
 };
 
@@ -43,10 +43,11 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const emailEl = event.target.querySelector("#email");
   let email = emailEl.value;
-  const isValid = validateEmail(email);
+  const isValid = validateEmail("");
   emailEl.setAttribute("edited", "");
 
   if (isValid) {
+    console.log(email, isValid);
     emailEl.value = "";
     userEmailDisplay.textContent = email;
     signup.dataset.state = HIDDEN;
