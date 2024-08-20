@@ -106,4 +106,24 @@ body {
   background: hsl(235, 18%, 26%);
   font-family: "Roboto", sans-serif;
   margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100vw;
+  height: 100vh;
+  background: hsl(0, 0%, 100%);
+}
+@media (min-width: 30rem) {
+  .card {
+    width: auto;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 36px;
+  }
 }/*# sourceMappingURL=style.css.map */
