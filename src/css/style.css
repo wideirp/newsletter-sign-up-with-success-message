@@ -92,13 +92,13 @@ textarea:not([rows]) {
 
 @font-face {
   font-family: "Roboto";
-  src: url("src/fonts/Roboto-Regular.ttf");
+  src: url("../../src/fonts/Roboto-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("src/fonts/Roboto-Bold.ttf");
+  src: url("../../src/fonts/Roboto-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
@@ -125,6 +125,20 @@ body {
   align-items: center;
 }
 
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sign-up .text-wrapper {
+  padding: 0 2rem;
+}
+@media (min-width: 30rem) {
+  .sign-up {
+    flex-direction: row-reverse;
+  }
+}
+
 .success {
   display: flex;
   flex-direction: column;
@@ -140,12 +154,14 @@ body {
 }
 
 .card {
+  max-width: 375px;
   width: 100vw;
   height: 100vh;
   background: hsl(0, 0%, 100%);
 }
 @media (min-width: 30rem) {
   .card {
+    max-width: none;
     width: auto;
     height: auto;
     padding: 1.5rem;
@@ -166,9 +182,22 @@ body {
   box-shadow: 0 4px 10px hsl(4, 100%, 67%);
 }
 
+#user-email {
+  font-weight: 700;
+}
+
 .success.card {
   max-width: 31.5rem;
 }
 .success.card .text-wrapper figure {
   margin: 2rem 0 0 0;
+}
+
+.success[data-state=hidden],
+.sign-up[data-state=hidden] {
+  display: none;
+}
+.success[data-state=visible],
+.sign-up[data-state=visible] {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

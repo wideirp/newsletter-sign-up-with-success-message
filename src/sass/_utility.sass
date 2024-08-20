@@ -1,10 +1,12 @@
 @use 'variables' as *
 
 .card
+  max-width: 375px
   width: 100vw
   height: 100vh
   background: $clr-neutral-100
   @media (min-width: 30rem)
+    max-width: none
     width: auto
     height: auto
     padding: 1.5rem
@@ -23,3 +25,6 @@
   &:active
     background: $clr-primary
     box-shadow: 0 4px 10px $clr-primary
+
+#user-email
+  font-weight: 700
