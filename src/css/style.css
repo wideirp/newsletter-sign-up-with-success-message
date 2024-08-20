@@ -110,6 +110,7 @@ body {
 }
 body h1 {
   font: 700 clamp(2.5rem, 1rem + 1vw, 3.5rem)/1 "Roboto", sans-serif;
+  margin: 0;
 }
 body p {
   font: 400 1rem/1.2 "Roboto", sans-serif;
@@ -136,15 +137,17 @@ body {
     height: auto;
     border-radius: 15px;
     overflow: hidden;
-    margin: 2rem;
   }
 }
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
   .card {
-    width: auto;
-    height: auto;
+    max-width: none;
     padding: 1.5rem;
-    border-radius: 36px;
+  }
+}
+@media (min-width: 60rem) {
+  .card {
+    max-width: 900px;
   }
 }
 
@@ -162,7 +165,7 @@ body {
   gap: 0.5rem;
   margin-top: 3rem;
 }
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
   .sign-up {
     flex-direction: row-reverse;
   }
