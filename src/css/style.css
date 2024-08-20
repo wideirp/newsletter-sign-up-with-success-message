@@ -125,6 +125,29 @@ body {
   align-items: center;
 }
 
+.card {
+  width: 100vw;
+  height: 100vh;
+  background: hsl(0, 0%, 100%);
+}
+@media (min-width: 23rem) {
+  .card {
+    max-width: 375px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+  }
+}
+@media (min-width: 40rem) {
+  .card {
+    width: auto;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 36px;
+  }
+}
+
 .sign-up {
   display: flex;
   flex-direction: column;
@@ -133,7 +156,7 @@ body {
 .sign-up .text-wrapper {
   padding: 0 2rem;
 }
-@media (min-width: 30rem) {
+@media (min-width: 40rem) {
   .sign-up {
     flex-direction: row-reverse;
   }
@@ -150,22 +173,6 @@ body {
 @media (min-width: 30rem) {
   .success .btn {
     margin: 3rem 0 1.5rem 0;
-  }
-}
-
-.card {
-  max-width: 375px;
-  width: 100vw;
-  height: 100vh;
-  background: hsl(0, 0%, 100%);
-}
-@media (min-width: 30rem) {
-  .card {
-    max-width: none;
-    width: auto;
-    height: auto;
-    padding: 1.5rem;
-    border-radius: 36px;
   }
 }
 
